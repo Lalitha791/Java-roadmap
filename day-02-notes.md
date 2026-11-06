@@ -40,3 +40,10 @@
 - [ ] Revise Day 1 and Day 2
 
 **Goal:** Build strong Core Java fundamentals for Infosys Systems Engineer training.
+
+
+4. Practice links
+- HackerRank – Java Datatypes
+- CodingBat – Java Practice
+- GeeksforGeeks – Type Conversion in Java
+- W3Schools – Java Type Casting
