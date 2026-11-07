@@ -1,49 +1,50 @@
-# Core Java – Day 2
+# Day 2 Notes – Type Casting, Constants and Type Promotion
 
-## Topics Covered
-- Java variables and data types revision
-- Type casting
-- Widening casting (implicit)
-- Narrowing casting (explicit)
-- Converting double to int
-- Converting int to double
-- `final` keyword and constants
-- Type promotion
+## 1. What is type casting?
+Type casting means converting a value from one data type to another.
 
-## Learning Objectives
-- Understand automatic and manual type conversion.
-- Convert values between primitive data types.
-- Understand data loss during narrowing.
-- Declare constants using the `final` keyword.
-- Apply type casting in practical programs.
+## 2. Widening casting (automatic)
+A smaller compatible type is converted to a larger type automatically.
 
-## Programs
-1. Widening Example
-2. Narrowing Example
-3. Double to Integer
-4. Integer to Double
-5. Final Keyword
-6. Type Promotion
-7. Salary Calculation
+```java
+int number = 25;
+double result = number;
+```
+The value becomes `25.0`. Widening generally does not lose information.
 
-## Practice
-- Complete all Day 2 assignments.
-- Solve assessment questions.
-- Run every Java program and verify its output.
+Common direction: `byte → short → int → long → float → double` (also `char → int`).
 
-## Progress Tracker
-- [ ] Complete Day 2 notes
-- [ ] Watch the learning video
-- [ ] Complete all 7 programs
-- [ ] Solve assignments
-- [ ] Complete assessment questions
-- [ ] Revise Day 1 and Day 2
+## 3. Narrowing casting (manual)
+A larger type is converted to a smaller type using an explicit cast.
 
-**Goal:** Build strong Core Java fundamentals for Infosys Systems Engineer training.
+```java
+double price = 56.89;
+int result = (int) price; // 56
+```
+The fractional part is discarded; this is not rounding. Narrowing can lose information.
 
+## 4. The final keyword
+Use `final` when a variable must not be reassigned.
 
-4. Practice links
-- HackerRank – Java Datatypes
-- CodingBat – Java Practice
-- GeeksforGeeks – Type Conversion in Java
-- W3Schools – Java Type Casting
+```java
+final double PI = 3.14159;
+```
+After initialization, assigning another value to `PI` causes a compilation error.
+
+## 5. Type promotion
+In arithmetic expressions, `byte`, `short` and `char` are generally promoted to `int`.
+
+```java
+byte a = 10;
+byte b = 20;
+int sum = a + b;
+```
+The expression `a + b` has type `int`, so assigning it directly to a `byte` is not allowed without a cast.
+
+## 6. Remember
+- Widening: automatic conversion to a wider compatible type.
+- Narrowing: explicit conversion; data may be lost.
+- Casting `double` to `int` truncates the decimal part.
+- `final` prevents reassignment.
+- Arithmetic with `byte`, `short` and `char` usually produces an `int`.
+- `int / int` performs integer division. Use `double` if you need a decimal result.
