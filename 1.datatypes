@@ -1,0 +1,426 @@
+# Java Data Types
+
+## 1. Introduction
+
+A data type specifies what kind of value a variable can store.
+
+Examples:
+- Age – Integer
+- Salary – Decimal
+- Name – String
+- Pass status – Boolean
+
+  Java has 2 main types of data types:
+
+### 1. Primitive Data Types (8)
+
+| Type      | Example             |
+| --------- | ------------------- |
+| `byte`    | `byte a = 10;`      |
+| `short`   | `short a = 100;`    |
+| `int`     | `int a = 500;`      |
+| `long`    | `long a = 10000L;`  |
+| `float`   | `float a = 10.5f;`  |
+| `double`  | `double a = 25.67;` |
+| `char`    | `char a = 'A';`     |
+| `boolean` | `boolean a = true;` |
+
+### 2. Non-Primitive (Reference) Data Types
+
+- String – `String name = "Java";`
+- Array – `int[] numbers = {1, 2, 3};`
+- Class – User-defined objects
+- Interface – Defines a contract
+- Enum – Fixed set of constants
+
+Remember:
+
+- Primitive = Stores simple values directly.
+- Non-primitive = Stores references to objects.
+
+Java data types are divided into two categories:
+
+1. Primitive data types
+2. Non-primitive (Reference) data types
+
+---
+
+## 2. Primitive Data Types
+
+Java has exactly **8 primitive data types**.
+
+### A. Integer Data Types
+
+These store whole numbers.
+
+| Data Type | Size | Range |
+|---|---:|---|
+| byte | 1 byte | -128 to 127 |
+| short | 2 bytes | -32,768 to 32,767 |
+| int | 4 bytes | -2³¹ to 2³¹-1 |
+| long | 8 bytes | -2⁶³ to 2⁶³-1 |
+
+Example:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        byte age = 22;
+        short year = 2026;
+        int salary = 35000;
+        long population = 8000000000L;
+
+        System.out.println(age);
+        System.out.println(year);
+        System.out.println(salary);
+        System.out.println(population);
+    }
+}
+```
+
+**Important points:**
+- `int` is the default type for integer literals.
+- `long` literals can use `L` at the end.
+- Choose a type according to the range of values required.
+
+### B. Decimal Data Types
+
+These store decimal numbers.
+
+| Data Type | Size | Precision |
+|---|---:|---|
+| float | 4 bytes | Approximately 6–7 decimal digits |
+| double | 8 bytes | Approximately 15–16 decimal digits |
+
+Example:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        float price = 99.5f;
+        double salary = 45000.75;
+
+        System.out.println(price);
+        System.out.println(salary);
+    }
+}
+```
+
+**Important points:**
+- `float` requires `f` or `F` at the end of its literal.
+- `double` is the default type for decimal literals.
+- `double` is generally preferred for ordinary decimal calculations.
+
+### C. Character Data Type
+
+`char` stores a single UTF-16 code unit.
+
+- Size: 2 bytes
+- Uses single quotes.
+
+Example:
+
+```java
+char grade = 'A';
+char symbol = '#';
+
+System.out.println(grade);
+System.out.println(symbol);
+```
+
+Output:
+
+```text
+A
+#
+```
+
+### D. Boolean Data Type
+
+`boolean` stores only two values:
+
+- `true`
+- `false`
+
+Example:
+
+```java
+boolean isPassed = true;
+boolean isEligible = false;
+
+System.out.println(isPassed);
+System.out.println(isEligible);
+```
+
+Output:
+
+```text
+true
+false
+```
+
+---
+
+## 3. Non-Primitive Data Types
+
+Non-primitive types are also called reference types.
+
+Examples:
+
+| Type | Example |
+|---|---|
+| String | `String name = "Lalitha";` |
+| Array | `int[] marks = {80, 90, 75};` |
+| Class | `Student s = new Student();` |
+| Interface | `Runnable r;` |
+| Enum | `Day today = Day.MONDAY;` |
+
+Example:
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        String name = "Lalitha";
+
+        int[] marks = {80, 90, 75};
+
+        System.out.println(name);
+        System.out.println(marks[0]);
+    }
+}
+```
+
+Output:
+
+```text
+Lalitha
+80
+```
+
+---
+
+## 4. Primitive vs Non-Primitive
+
+| Primitive | Non-Primitive |
+|---|---|
+| 8 built-in types | Many reference types |
+| Stores a primitive value | Holds a reference to an object or array |
+| Cannot store null | Can store null |
+| Fixed primitive size | Object size varies |
+| Examples: int, char | Examples: String, arrays |
+
+---
+
+## 5. Default Values in Java
+
+Instance and static variables receive default values.
+
+| Data Type | Default Value |
+|---|---|
+| byte, short, int, long | 0 |
+| float, double | 0.0 |
+| char | '\u0000' |
+| boolean | false |
+| Reference types | null |
+
+Example:
+
+```java
+public class Main {
+    int age;
+    double salary;
+    boolean passed;
+    String name;
+
+    public static void main(String[] args) {
+        Main obj = new Main();
+
+        System.out.println(obj.age);
+        System.out.println(obj.salary);
+        System.out.println(obj.passed);
+        System.out.println(obj.name);
+    }
+}
+```
+
+Output:
+
+```text
+0
+0.0
+false
+null
+```
+
+**Important:** Local variables do not receive automatic default values. They must be initialized before use.
+
+---
+
+## 6. Type Casting
+
+Type casting means converting one data type into another.
+
+### A. Widening Casting
+
+Converting a smaller compatible type into a larger type.
+
+It happens automatically.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        int number = 100;
+        double result = number;
+
+        System.out.println(result);
+    }
+}
+```
+
+Output:
+
+```text
+100.0
+```
+
+### B. Narrowing Casting
+
+Converting a larger type into a smaller type.
+
+It requires manual casting.
+
+```java
+public class Main {
+    public static void main(String[] args) {
+        double number = 56.89;
+        int result = (int) number;
+
+        System.out.println(result);
+    }
+}
+```
+
+Output:
+
+```text
+56
+```
+
+The decimal portion is discarded.
+
+---
+
+## 7. Important Literal Rules
+
+| Literal | Example |
+|---|---|
+| Integer | `int a = 100;` |
+| Long | `long b = 100000L;` |
+| Float | `float c = 10.5f;` |
+| Double | `double d = 10.5;` |
+| Character | `char e = 'A';` |
+| String | `String f = "Java";` |
+| Boolean | `boolean g = true;` |
+
+---
+
+## 8. Common Mistakes
+
+**Mistake 1: Missing f in float**
+
+Incorrect:
+```java
+float price = 10.5;
+```
+
+Correct:
+```java
+float price = 10.5f;
+```
+
+**Mistake 2: Using double quotes for char**
+
+Incorrect:
+```java
+char grade = "A";
+```
+
+Correct:
+```java
+char grade = 'A';
+```
+
+**Mistake 3: Using a decimal value without casting**
+
+Incorrect:
+```java
+double a = 56.89;
+int b = a;
+```
+
+Correct:
+```java
+double a = 56.89;
+int b = (int) a;
+```
+
+---
+
+## 9. Interview and Assessment Questions
+
+1. How many primitive data types are available in Java? - 8
+2. What is the size of int? - 4 bytes
+3. What is the size of char? - 2 bytes
+4. Which is the default type for integer literals? - int
+5. Which is the default type for decimal literals? - double
+6. What is the difference between float and double? - Precision
+7. Can primitive data types store null? - No
+8. What is the difference between primitive and reference types? - Values vs References
+9. What are default values in Java? - Zero, false, null
+10. What is widening and narrowing casting? - Automatic vs Explicit
+11. What is the output of `(int) 56.89`? - 56
+12. Why do we use `L` for long and `f` for float? - Type identification
+
+### Short Answers
+
+1. 8.
+2. 4 bytes.
+3. 2 bytes.
+4. int.
+5. double.
+6. float has approximately 6–7 decimal digits of precision; double has approximately 15–16.
+7. No.
+8. Primitive types store primitive values; reference variables refer to objects or arrays.
+9. Default values are assigned to instance and static variables.
+10. Widening is automatic conversion; narrowing requires explicit casting.
+11. 56.
+12. To identify long and float literals.
+
+---
+
+## 10. Coding Assignments
+
+1. Declare and print all 8 primitive data types.
+2. Store your name, age, percentage and pass status.
+3. Convert int into double.
+4. Convert double into int.
+5. Calculate the sum of two integers.
+6. Calculate the average of three decimal numbers.
+7. Print the numeric value of a character.
+8. Create an array of five marks and calculate the total.
+
+---
+
+## 11. Key Points to Remember
+
+- Java has 8 primitive data types.
+- `int` is the default integer literal type.
+- `double` is the default decimal literal type.
+- `char` uses single quotes.
+- `String` uses double quotes.
+- `boolean` stores true or false.
+- Local variables must be initialized before use.
+- Widening is automatic.
+- Narrowing requires explicit casting.
+
+**Day 2 Topic: Java Variables, Data Types and Type Casting**
