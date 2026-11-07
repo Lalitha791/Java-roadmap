@@ -1,17 +1,66 @@
-# Day 2 Assessment Questions
+# Day 3 Assessment Questions
 
-Answer these without checking the notes.
+Try these before checking the notes or running code.
 
-1. What is widening casting?
-2. What is narrowing casting?
-3. Which requires an explicit cast: widening or narrowing?
-4. What is the output of `(int) 56.89`?
-5. Does casting `double` to `int` round the number?
-6. What does the `final` keyword do to a local variable?
-7. What is the result type of `byte + byte` in Java?
-8. Why can `byte result = a + b;` produce a compilation error?
-9. What is the difference between `int / int` and `double / int`?
-10. What information may be lost during narrowing?
+## Output prediction
 
-## Coding test
-Write a program that reads a `double` value, converts it to `int`, and prints both values. Then write a second program that calculates gross salary using basic salary, HRA and DA.
+**Q1**
+```java
+int a = 10;
+int b = 3;
+System.out.println(a % b);
+```
+
+**Q2**
+```java
+int x = 5;
+System.out.println(x++);
+System.out.println(++x);
+```
+
+**Q3**
+```java
+System.out.println(10 + 5 * 2);
+```
+
+**Q4**
+```java
+int a = 10;
+a += 5;
+a *= 2;
+System.out.println(a);
+```
+
+**Q5**
+```java
+System.out.println(true && false);
+```
+
+## Concept questions
+6. Which operator checks equality?
+7. What is the difference between `=` and `==`?
+8. What is the difference between `&&` and `||`?
+9. What is the difference between prefix and postfix increment?
+10. What is the result type of a relational expression?
+11. What does `%` return?
+12. Why does `10 / 3` produce `3` in Java?
+13. What does the ternary operator do?
+14. Which has higher precedence: `*` or `+`?
+15. What is short-circuit evaluation?
+
+## Answer key
+1. `1`
+2. `5`, then `7`
+3. `20`
+4. `30`
+5. `false`
+6. `==`
+7. Assignment versus equality comparison.
+8. AND requires both true; OR requires at least one true.
+9. Prefix updates before use; postfix uses the old value before updating.
+10. `boolean`
+11. The remainder.
+12. Both operands are integers, so integer division is performed.
+13. Selects one of two expressions based on a condition.
+14. `*`
+15. Evaluation stops when the result is already determined.
