@@ -166,3 +166,19 @@ For this beginner lesson, focus on arithmetic, relational, logical, assignment, 
 - Unary: operate on one operand.
 - Ternary: choose one of two values.
 - Precedence: controls evaluation order.
+
+
+
+explain about ternenry
+Ternary Operator in Java (? :)
+The ternary operator is a shortcut for writing simple if-else conditions in Java.
+
+It is called a ternary operator because it uses three operands:
+
+1.Condition
+2.Value if the condition is true
+3.Value if the condition is false
+
+int number = 10;
+String result = (number % 2 == 0) ? "Even" : "Odd";
+System.out.println(result);
