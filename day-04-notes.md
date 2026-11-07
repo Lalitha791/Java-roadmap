@@ -6,8 +6,6 @@ Day 4
 
 Core Java
 
-2 hours
-
 Today's learning order:
 
 1. `if` statement
@@ -381,3 +379,10 @@ Interview questions to prepare:
 6. Difference between `&&` and `||`?
 7. When should we use a ternary operator instead of `if-else`?
 
+1\. What happens if multiple conditions in an `else-if` ladder are true?
+
+Only the first true condition is executed. The remaining conditions are skipped.
+
+2\. When should we use a ternary operator instead of `if-else`?
+
+Use a ternary operator for simple conditions when choosing between two values. Use `if-else` for complex conditions or multiple statements.
