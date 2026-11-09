@@ -1,0 +1,1 @@
+ the static keyword allows variables and methods to belong to the class itself rather than individual object instances, making them accessible without object creation. Finally, it demonstrates how to design singleton classes that restrict instantiation to a single object by utilizing private constructors and controlled access methods.
