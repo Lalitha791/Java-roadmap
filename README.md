@@ -375,3 +375,31 @@ By Day 90, aim for:
 | Timed mock assessments | 6           |
 | Core Java concepts     | All 30 days |
 | DSA concepts           | All 60 days |
+
+
+
+OOPS IN JAVA COMPLETE TOPICS:
+Table of Contents
+Class
+Object
+Fields and Methods
+Constructor
+Default Constructor
+Parameterized Constructor
+this Keyword
+Constructor Overloading
+static Keyword
+Single Inheritance
+Multilevel Inheritance
+Hierarchical Inheritance
+Method Overriding
+Method Overloading
+Encapsulation
+Abstraction
+Interface
+Multiple Inheritance Using Interfaces
+Multiple Implementations of an Interface
+Runtime Polymorphism
+Abstract Class vs Interface
+Important OOP Keywords
+Quick Revision
